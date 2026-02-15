@@ -20,3 +20,5 @@
 [brain-calc](https://asciinema.org/a/XxK6jbiRFtOhRlfM)
 
 [brain-gcd](https://asciinema.org/a/1f2f6iNtD87fNwsl)
+
+[brain-gcd](https://asciinema.org/a/IGEfdlYrWPOcFL31)
