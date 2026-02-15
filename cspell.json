@@ -10,6 +10,7 @@
         "LARAVEL",
         "nginxproxyman",
         "pgsql",
+        "phpcs",
         "phpstorm",
         "phpunit",
         "requirepass",
