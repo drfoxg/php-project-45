@@ -13,28 +13,3 @@ function welcome(): string
 
     return $name;
 }
-
-function runBrainEven()
-{
-    $name = welcome();
-    line('Answer "yes" if the number is even, otherwise answer "no".');
-
-    $rounds = 3;
-
-    for ($i = 0; $i < $rounds; $i++) {
-        $number = random_int(1, 100);
-        $correctAnswer = $number % 2 === 0 ? 'yes' : 'no';
-
-        $answer = prompt("Question: {$number}\nYour answer");
-
-        if ($answer !== $correctAnswer) {
-            line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $correctAnswer);
-            line("Let's try again, %s!", $name);
-            return;
-        }
-
-        line('Correct!');
-    }
-
-    line('Congratulations, %s!', $name);
-}
