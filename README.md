@@ -16,3 +16,5 @@
 ## Записи тестов
 
 [brain-even](https://asciinema.org/a/ql812keEWZqu83aW)
+
+[brain-calc](https://asciinema.org/a/XxK6jbiRFtOhRlfM)
