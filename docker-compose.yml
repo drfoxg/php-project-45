@@ -1,0 +1,49 @@
+version: "3.9"
+
+services:
+    app:
+        build:
+            context: .
+            dockerfile: docker/php/Dockerfile.8.4
+        image: brain-games-php:8.4
+        container_name: brain-games-app
+        working_dir: /var/www
+        restart: unless-stopped
+        tty: true
+        volumes:
+            - /tmp:/tmp
+            - ./:/var/www
+            - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
+        networks:
+            - app-network-brain-games
+
+    web:
+        image: nginx:latest
+        container_name: brain-games-nginx
+        restart: unless-stopped
+        tty: true
+        volumes:
+            - ./:/var/www/
+            - ./docker/nginx/conf.d/:/etc/nginx/conf.d/
+            - ./docker/nginx/snippets/:/etc/nginx/snippets/
+            - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+        networks:
+            - app-network-brain-games
+            - nginxproxyman
+        depends_on:
+            - app
+
+networks:
+    app-network-brain-games:
+        driver: bridge
+    nginxproxyman:
+        external: true
+        name: nginxproxyman
+    sqldev-backend:
+        external: true
+        name: sqldev-backend
+
+volumes:
+    redis-brain-games:
+        driver: local
+        name: redis-brain-games
