@@ -22,7 +22,7 @@ function runBrainEven()
     $rounds = 3;
 
     for ($i = 0; $i < $rounds; $i++) {
-        $number = rand(1, 100);
+        $number = random_int(1, 100);
         $correctAnswer = $number % 2 === 0 ? 'yes' : 'no';
 
         $answer = prompt("Question: {$number}\nYour answer");
