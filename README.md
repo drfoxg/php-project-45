@@ -21,6 +21,6 @@
 
 [brain-gcd](https://asciinema.org/a/1f2f6iNtD87fNwsl)
 
-[brain-gcd](https://asciinema.org/a/IGEfdlYrWPOcFL31)
+[brain-progression](https://asciinema.org/a/IGEfdlYrWPOcFL31)
 
-[brain-gcd](https://asciinema.org/a/FxuHheCSxY8XomlM)
+[brain-prime](https://asciinema.org/a/FxuHheCSxY8XomlM)
