@@ -18,3 +18,5 @@
 [brain-even](https://asciinema.org/a/ql812keEWZqu83aW)
 
 [brain-calc](https://asciinema.org/a/XxK6jbiRFtOhRlfM)
+
+[brain-gcd](https://asciinema.org/a/1f2f6iNtD87fNwsl)
