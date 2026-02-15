@@ -7,6 +7,7 @@
         "Dockerfiles",
         "drfoxg",
         "hexlet",
+        "Hexlets",
         "LARAVEL",
         "nginxproxyman",
         "pgsql",
@@ -14,7 +15,8 @@
         "phpstorm",
         "phpunit",
         "requirepass",
-        "sqldev"
+        "sqldev",
+        "Squiz"
     ],
     "ignoreWords": [],
     "import": []
