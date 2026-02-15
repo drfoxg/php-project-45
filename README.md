@@ -12,3 +12,7 @@
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=drfoxg_php-project-45&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=drfoxg_php-project-45)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=drfoxg_php-project-45&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=drfoxg_php-project-45)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=drfoxg_php-project-45&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=drfoxg_php-project-45)
+
+## Записи тестов
+
+[brain-even](https://asciinema.org/a/ql812keEWZqu83aW)
