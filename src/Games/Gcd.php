@@ -6,24 +6,8 @@ use function App\Engine\run;
 
 use const App\Engine\ROUNDS_COUNT;
 
-function gcd(int $a, int $b): int
-{
-    while ($b !== 0) {
-        $temp = $b;
-        $b = $a % $b;
-        $a = $temp;
-    }
-    return $a;
-}
-
-function generateRound(): array
-{
-    $num1 = random_int(1, 100);
-    $num2 = random_int(1, 100);
-    $question = "{$num1} {$num2}";
-    $correctAnswer = (string) gcd($num1, $num2);
-    return [$question, $correctAnswer];
-}
+const MIN_NUMBER = 1;
+const MAX_NUMBER = 100;
 
 function play(): void
 {
@@ -35,4 +19,23 @@ function play(): void
     }
 
     run($description, $rounds);
+}
+
+function generateRound(): array
+{
+    $num1 = random_int(MIN_NUMBER, MAX_NUMBER);
+    $num2 = random_int(MIN_NUMBER, MAX_NUMBER);
+    $question = "{$num1} {$num2}";
+    $correctAnswer = (string) getGcd($num1, $num2);
+    return [$question, $correctAnswer];
+}
+
+function getGcd(int $a, int $b): int
+{
+    while ($b !== 0) {
+        $temp = $b;
+        $b = $a % $b;
+        $a = $temp;
+    }
+    return $a;
 }

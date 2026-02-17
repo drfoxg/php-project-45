@@ -6,29 +6,8 @@ use function App\Engine\run;
 
 use const App\Engine\ROUNDS_COUNT;
 
-function generateRound(): array
-{
-    $num1 = random_int(1, 50);
-    $num2 = random_int(1, 50);
-    $operators = ['+', '-', '*'];
-    $operator = $operators[array_rand($operators)];
-
-    $question = "{$num1} {$operator} {$num2}";
-
-    switch ($operator) {
-        case '+':
-            $result = $num1 + $num2;
-            break;
-        case '-':
-            $result = $num1 - $num2;
-            break;
-        case '*':
-            $result = $num1 * $num2;
-            break;
-    }
-
-    return [$question, (string) $result];
-}
+const MIN_NUMBER = 1;
+const MAX_NUMBER = 50;
 
 function play(): void
 {
@@ -40,4 +19,29 @@ function play(): void
     }
 
     run($description, $rounds);
+}
+
+function generateRound(): array
+{
+    $a = random_int(MIN_NUMBER, MAX_NUMBER);
+    $b = random_int(MIN_NUMBER, MAX_NUMBER);
+    $operators = ['+', '-', '*'];
+    $operator = $operators[array_rand($operators)];
+
+    $question = "{$a} {$operator} {$b}";
+
+    $result = calculate($a, $b, $operator);
+
+    return [$question, (string) $result];
+}
+
+function calculate(int $a, int $b, string $operator): int
+{
+    if ($operator === '+') {
+        return $a + $b;
+    } elseif ($operator === '-') {
+        return $a - $b;
+    }
+
+    return $a * $b;
 }

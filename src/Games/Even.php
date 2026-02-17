@@ -6,12 +6,8 @@ use function App\Engine\run;
 
 use const App\Engine\ROUNDS_COUNT;
 
-function generateRound(): array
-{
-    $number = random_int(1, 100);
-    $correctAnswer = $number % 2 === 0 ? 'yes' : 'no';
-    return [(string) $number, $correctAnswer];
-}
+const MIN_NUMBER = 1;
+const MAX_NUMBER = 100;
 
 function play(): void
 {
@@ -23,4 +19,16 @@ function play(): void
     }
 
     run($description, $rounds);
+}
+
+function generateRound(): array
+{
+    $number = random_int(MIN_NUMBER, MAX_NUMBER);
+    $correctAnswer = isEven($number) ? 'yes' : 'no';
+    return [(string) $number, $correctAnswer];
+}
+
+function isEven(int $number): bool
+{
+    return $number % 2 === 0;
 }
