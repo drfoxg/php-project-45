@@ -25,7 +25,7 @@ function generateRound(): array
 {
     $number = random_int(MIN_NUMBER, MAX_NUMBER);
     $correctAnswer = isPrime($number) ? 'yes' : 'no';
-    return [(string) $number, $correctAnswer];
+    return [$number, $correctAnswer];
 }
 
 // Простое число — делится только на 1 и на себя.

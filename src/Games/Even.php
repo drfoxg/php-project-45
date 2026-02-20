@@ -25,7 +25,7 @@ function generateRound(): array
 {
     $number = random_int(MIN_NUMBER, MAX_NUMBER);
     $correctAnswer = isEven($number) ? 'yes' : 'no';
-    return [(string) $number, $correctAnswer];
+    return [$number, $correctAnswer];
 }
 
 function isEven(int $number): bool

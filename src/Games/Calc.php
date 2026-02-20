@@ -30,9 +30,9 @@ function generateRound(): array
 
     $question = "{$a} {$operator} {$b}";
 
-    $result = calculate($a, $b, $operator);
+    $correctAnswer = calculate($a, $b, $operator);
 
-    return [$question, (string) $result];
+    return [$question, $correctAnswer];
 }
 
 function calculate(int $a, int $b, string $operator): int
