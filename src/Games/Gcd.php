@@ -33,9 +33,8 @@ function generateRound(): array
 function getGcd(int $a, int $b): int
 {
     while ($b !== 0) {
-        $temp = $b;
-        $b = $a % $b;
-        $a = $temp;
+        [$a, $b] = [$b, $a % $b];
     }
+
     return $a;
 }
