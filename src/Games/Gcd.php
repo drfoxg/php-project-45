@@ -4,21 +4,13 @@ namespace App\Games\Gcd;
 
 use function App\Engine\run;
 
-use const App\Engine\ROUNDS_COUNT;
-
 const MIN_NUMBER = 1;
 const MAX_NUMBER = 100;
+const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 
 function play(): void
 {
-    $description = 'Find the greatest common divisor of given numbers.';
-
-    $rounds = [];
-    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
-        $rounds[] = generateRound();
-    }
-
-    run($description, $rounds);
+    run(DESCRIPTION, __NAMESPACE__ . '\\generateRound');
 }
 
 function generateRound(): array

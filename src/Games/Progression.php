@@ -4,25 +4,17 @@ namespace App\Games\Progression;
 
 use function App\Engine\run;
 
-use const App\Engine\ROUNDS_COUNT;
-
 const MIN_LENGTH = 5;
 const MAX_LENGTH = 10;
 const MIN_START = 1;
 const MAX_START = 50;
 const MIN_STEP = 2;
 const MAX_STEP = 10;
+const DESCRIPTION = 'What number is missing in the progression?';
 
 function play(): void
 {
-    $description = 'What number is missing in the progression?';
-
-    $rounds = [];
-    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
-        $rounds[] = generateRound();
-    }
-
-    run($description, $rounds);
+    run(DESCRIPTION, __NAMESPACE__ . '\\generateRound');
 }
 
 function generateRound(): array

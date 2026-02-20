@@ -4,21 +4,13 @@ namespace App\Games\Prime;
 
 use function App\Engine\run;
 
-use const App\Engine\ROUNDS_COUNT;
-
 const MIN_NUMBER = 1;
 const MAX_NUMBER = 100;
+const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function play(): void
 {
-    $description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-
-    $rounds = [];
-    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
-        $rounds[] = generateRound();
-    }
-
-    run($description, $rounds);
+    run(DESCRIPTION, __NAMESPACE__ . '\\generateRound');
 }
 
 function generateRound(): array
